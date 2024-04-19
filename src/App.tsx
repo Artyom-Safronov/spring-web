@@ -8,6 +8,12 @@ import { CustomLayout } from "./layout/CustomLayout";
 import { CustomRoutes } from "react-admin";
 import { Route } from "react-router-dom";
 import { Blank } from "./resources/Blank";
+import {
+  Resource,
+  ListGuesser,
+  EditGuesser,
+  ShowGuesser,
+} from "react-admin"; 
 
 export const App = () => {
   return (
@@ -20,6 +26,14 @@ export const App = () => {
       <CustomRoutes>
         <Route path="/blank" element={<Blank />} />
       </CustomRoutes>
-    </Admin>
+    
+      <Resource
+        name="owners"
+        edit={EditGuesser}
+        list={ListGuesser}
+        show={ShowGuesser}
+        recordRepresentation="firstName"
+      />
+      </Admin>
   );
 };

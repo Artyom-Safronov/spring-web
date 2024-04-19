@@ -7,7 +7,7 @@ const SERVER_URL = "http://localhost:8080";
 export default ({ mode }) => {
   process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
 
-  const BASE_URL = process.env.VITE_SIMPLE_REST_URL ?? "/";
+  const BASE_URL = process.env.VITE_REST_URL ?? "/";
 
   return defineConfig({
     plugins: [react()],

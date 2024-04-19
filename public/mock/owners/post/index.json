@@ -1,0 +1,8 @@
+{
+  "id": 1,
+  "firstName": "Rachelle",
+  "lastName": "Jenkins",
+  "address": "Ref to random faker data",
+  "city": "https://loremflickr.com/640/480/city",
+  "telephone": "Ref to random faker data"
+}
